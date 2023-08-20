@@ -1,0 +1,747 @@
+fileFormatVersion: 2
+guid: 582227dd334e2f748ac097fe1c2003d3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Fall
+    second: {fileID: 7400000, guid: db82fc23a4dd6bc4d95ce04531cf1fa4, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: IDLE
+    second: {fileID: 7400000, guid: 0a78cca20aaf01a479e19fa6836cfe58, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Run
+    second: {fileID: 7400000, guid: d170b15eaf7a9a24590b7fb4dbeed626, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 32
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638281777649714842
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: stickMan_Frame_0
+    originalName: 
+    pivot: {x: 0.5793651, y: -0.010101009}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 327
+      width: 63
+      height: 99
+    spriteID: 14d96f8cd0329dc41814b1e625e9148e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 327}
+  - name: stickMan_Frame_1
+    originalName: 
+    pivot: {x: 0.6057692, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 215
+      width: 52
+      height: 99
+    spriteID: 9dfc0c3bf22db674ea452395cd423e39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 215}
+  - name: stickMan_Frame_2
+    originalName: 
+    pivot: {x: 0.6022727, y: -0.010101009}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 322
+      width: 44
+      height: 99
+    spriteID: e6a7224c9c86d4441ad0f79d6bf355e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 322}
+  - name: stickMan_Frame_3
+    originalName: 
+    pivot: {x: 0.5769231, y: -0.020202018}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 318
+      width: 39
+      height: 99
+    spriteID: a305692a6951b084eb5d82ba35162392
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 318}
+  - name: stickMan_Frame_4
+    originalName: 
+    pivot: {x: 0.51315784, y: -0.010101009}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 257
+      y: 208
+      width: 38
+      height: 99
+    spriteID: 6dca85d49d2c52740984a30ac2014cb7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 257, y: 208}
+  - name: stickMan_Frame_5
+    originalName: 
+    pivot: {x: 0.5119048, y: -0.020202018}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 111
+      width: 42
+      height: 99
+    spriteID: dcb7c9030ec126c4c9b7a4a00760434e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 111}
+  - name: stickMan_Frame_6
+    originalName: 
+    pivot: {x: 0.47674417, y: -0.010101009}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 4
+      width: 43
+      height: 99
+    spriteID: d25dafcc8b17600479b733a979b25758
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 4}
+  - name: stickMan_Frame_7
+    originalName: 
+    pivot: {x: 0.5948276, y: -0.010101009}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 108
+      width: 58
+      height: 99
+    spriteID: 83bde591e92636a46b27b3903705c5ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 108}
+  - name: stickMan_Frame_8
+    originalName: 
+    pivot: {x: 0.5703125, y: -0.041666664}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 4
+      width: 64
+      height: 96
+    spriteID: fe06928e8689ece4cb9c46c1241047ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 4}
+  - name: stickMan_Frame_9
+    originalName: 
+    pivot: {x: 0.5793651, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 219
+      width: 63
+      height: 100
+    spriteID: ff41c5413415ffc4d8e6440bdad0637b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 219}
+  - name: stickMan_Frame_10
+    originalName: 
+    pivot: {x: 0.5069444, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 111
+      width: 72
+      height: 100
+    spriteID: 84555f9de60c8c24f81c010ba35f7e11
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 111}
+  - name: stickMan_Frame_11
+    originalName: 
+    pivot: {x: 0.51369864, y: -0.010101009}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 73
+      height: 99
+    spriteID: 3b144c29bfd347548815ae591afbb069
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: stickMan_Frame_12
+    originalName: 
+    pivot: {x: 0.3536585, y: -0.010204081}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 323
+      width: 41
+      height: 98
+    spriteID: 6d7001fae1f0eaf44aa991d2a767a42d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 323}
+  - name: stickMan_Frame_13
+    originalName: 
+    pivot: {x: 0.3536585, y: -0.010416666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 110
+      width: 41
+      height: 96
+    spriteID: d3f25a49cf0d72744a5b2886f2e999d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 110}
+  - name: stickMan_Frame_14
+    originalName: 
+    pivot: {x: 0.3536585, y: -0.010638298}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 257
+      y: 4
+      width: 41
+      height: 94
+    spriteID: 6526f0d0eb370174789a1f53c053297c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 257, y: 4}
+  - name: stickMan_Frame_15
+    originalName: 
+    pivot: {x: 0.3536585, y: -0.010638298}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 257
+      y: 106
+      width: 41
+      height: 94
+    spriteID: 6074b3003ba18274cad91b360266ab61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 257, y: 106}
+  - name: stickMan_Frame_16
+    originalName: 
+    pivot: {x: 0.3536585, y: -0.010416666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 214
+      width: 41
+      height: 96
+    spriteID: fedd571ac68d26a44ad82328f6e4e733
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 214}
+  - name: stickMan_Frame_17
+    originalName: 
+    pivot: {x: 0.3536585, y: -0.010204081}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 4
+      width: 41
+      height: 98
+    spriteID: 584e3149342f0984d8737c8a6796ca87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 208, y: 4}
+  - name: stickMan_Frame_18
+    originalName: 
+    pivot: {x: 0.44047618, y: -0.030927833}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 218
+      width: 42
+      height: 97
+    spriteID: bc495808f079bb14f917f9f7e709367d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 218}
+  - name: stickMan_Frame_19
+    originalName: 
+    pivot: {x: 0.4078947, y: -0.07526882}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 257
+      y: 315
+      width: 38
+      height: 93
+    spriteID: 1e94c543fc97a6a4786da39992c45122
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 257, y: 315}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 783489410
+    name: stickMan
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: stickMan_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 1
+        width: 63
+        height: 99
+      spriteId: 14d96f8cd0329dc41814b1e625e9148e
+    - name: stickMan_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 5
+        y: 0
+        width: 52
+        height: 99
+      spriteId: 9dfc0c3bf22db674ea452395cd423e39
+    - name: stickMan_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 10
+        y: 1
+        width: 44
+        height: 99
+      spriteId: e6a7224c9c86d4441ad0f79d6bf355e5
+    - name: stickMan_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 14
+        y: 2
+        width: 39
+        height: 99
+      spriteId: a305692a6951b084eb5d82ba35162392
+    - name: stickMan_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 17
+        y: 1
+        width: 38
+        height: 99
+      spriteId: 6dca85d49d2c52740984a30ac2014cb7
+    - name: stickMan_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 15
+        y: 2
+        width: 42
+        height: 99
+      spriteId: dcb7c9030ec126c4c9b7a4a00760434e
+    - name: stickMan_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 16
+        y: 1
+        width: 43
+        height: 99
+      spriteId: d25dafcc8b17600479b733a979b25758
+    - name: stickMan_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 2
+        y: 1
+        width: 58
+        height: 99
+      spriteId: 83bde591e92636a46b27b3903705c5ec
+    - name: stickMan_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 4
+        width: 64
+        height: 96
+      spriteId: fe06928e8689ece4cb9c46c1241047ff
+    - name: stickMan_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 0
+        width: 63
+        height: 100
+      spriteId: ff41c5413415ffc4d8e6440bdad0637b
+    - name: stickMan_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 72
+        height: 100
+      spriteId: 84555f9de60c8c24f81c010ba35f7e11
+    - name: stickMan_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: -1
+        y: 1
+        width: 73
+        height: 99
+      spriteId: 3b144c29bfd347548815ae591afbb069
+    - name: stickMan_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 22
+        y: 1
+        width: 41
+        height: 98
+      spriteId: 6d7001fae1f0eaf44aa991d2a767a42d
+    - name: stickMan_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 22
+        y: 1
+        width: 41
+        height: 96
+      spriteId: d3f25a49cf0d72744a5b2886f2e999d3
+    - name: stickMan_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 22
+        y: 1
+        width: 41
+        height: 94
+      spriteId: 6526f0d0eb370174789a1f53c053297c
+    - name: stickMan_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 22
+        y: 1
+        width: 41
+        height: 94
+      spriteId: 6074b3003ba18274cad91b360266ab61
+    - name: stickMan_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 22
+        y: 1
+        width: 41
+        height: 96
+      spriteId: fedd571ac68d26a44ad82328f6e4e733
+    - name: stickMan_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 22
+        y: 1
+        width: 41
+        height: 98
+      spriteId: 584e3149342f0984d8737c8a6796ca87
+    - name: stickMan_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 18
+        y: 3
+        width: 42
+        height: 97
+      spriteId: bc495808f079bb14f917f9f7e709367d
+    - name: stickMan_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 21
+        y: 7
+        width: 38
+        height: 93
+      spriteId: 1e94c543fc97a6a4786da39992c45122
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 73, y: 100}
