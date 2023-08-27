@@ -111,10 +111,10 @@ public class WindowPositionGetter : MonoBehaviour
         // 获取窗口的桌面坐标系中的绝对位置
         //GetWindowPosition();
 
-        //if (!Application.isEditor || isTest)
-        //{
-        //    SetWindowsPosition();
-        //}
+        if (!Application.isEditor || isTest)
+        {
+            SetWindowsPositionToCenter();
+        }
 
         //Debug.Log("Window Position: " + windowPosition);
     }

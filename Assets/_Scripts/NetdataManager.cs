@@ -9,18 +9,37 @@ public class NetdataManager : NetworkBehaviour
     public List<ulong> clientOrder;
     public static NetdataManager instance;
     public static event Action OnOrderUpdate;
-
-
+    private readonly NetworkVariable<InputNetworkData> _netState = new(writePerm: NetworkVariableWritePermission.Owner);
+    public Vector2 moveControl;
+    public static NetdataManager host;
+    public bool isThisHost;
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
+        Debug.Log(OwnerClientId);
+        Init();
+        
+    }
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+        
+    }
+
+    private void Init()
+    {
         if (IsOwner)
         {
             instance = this;
             AddNewOrder(OwnerClientId);
         }
+        if (OwnerClientId == 0)
+        {
+            host = this;
+            isThisHost = true;
+            Debug.Log("Host确定",gameObject);
+        }
         Debug.Log("生成Manager");
-
     }
     public override void OnNetworkDespawn()
     {
@@ -43,7 +62,7 @@ public class NetdataManager : NetworkBehaviour
         AddNewOrderServerRPC(clientID);
 
     }
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     private void AddNewOrderServerRPC(ulong clientID)
     {
         //Debug.Log(clientID);
@@ -63,7 +82,7 @@ public class NetdataManager : NetworkBehaviour
 
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     private void ChangeOrderServerRPC(ulong clientID)
     {
         //clientOrder.Remove(clientID);
@@ -90,7 +109,7 @@ public class NetdataManager : NetworkBehaviour
 
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     private void RemoveOrderServerRPC(ulong clientID)
     {
         //clientOrder.Remove(clientID);
@@ -103,5 +122,40 @@ public class NetdataManager : NetworkBehaviour
     {
         instance.clientOrder.Remove(clientID);
         OnOrderUpdate?.Invoke();
+    }
+    private void Update()
+    {
+        if(isThisHost)
+        {
+            if (IsOwner)
+            {
+                _netState.Value = new InputNetworkData() 
+                {
+                    moveDir = moveControl
+                };
+            }
+            else
+            {
+                moveControl = _netState.Value.moveDir;
+            }
+        }
+    }
+}
+struct InputNetworkData : INetworkSerializable
+{
+    private float _x, _y;
+    internal Vector2 moveDir
+    {
+        get => new Vector2(_x, _y);
+        set
+        {
+            _x = value.x;
+            _y = value.y;
+        }
+    }
+    public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
+    {
+        serializer.SerializeValue(ref _x);
+        serializer.SerializeValue(ref _y);
     }
 }

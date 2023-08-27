@@ -8,26 +8,29 @@ public class ControllerWhitWindowPosition : MonoBehaviour
     [SerializeField] WindowPositionGetter positionGetter;
     [SerializeField] Transform CameraRoot;
     [SerializeField] float rateBetweenWindowsToGame;//1对应0.00342 100对应0.0343
+    
     float rateBetweenWindowsToGameX, rateBetweenWindowsToGameY;
     bool isFocus = false;
     private void Start()
     {
+        
         //InvokeRepeating("CameraUpdate",0.5f,0.05f);
     }
     
-    async void CameraUpdate()
+    public async void CameraUpdate(bool isOnlyOnce = false)
     {
         //Debug.Log("test");
 
-        CameraRoot.transform.position = positionGetter.GetWindowPosition() * rateBetweenWindowsToGame;
+        CameraRoot.transform.position = positionGetter.GetWindowPosition() * rateBetweenWindowsToGame + (Vector2)HostDataManager.Instance.startPoint.position;
         //var pos = positionGetter.GetWindowPosition();
         //CameraRoot.transform.position =  new Vector2(pos.x * rateBetweenWindowsToGameX, pos.y * rateBetweenWindowsToGameY);
         //CameraUpdate();   
-        await Task.Delay(50);
-        if(isFocus)
+        if(!isFocus || isOnlyOnce)
         {
-            CameraUpdate();
+            return;
         }
+        await Task.Delay(10);
+        CameraUpdate(isOnlyOnce);
     }
     public void ChangeRate(float rate)
     {

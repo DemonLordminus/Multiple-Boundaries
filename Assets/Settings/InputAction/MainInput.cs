@@ -37,6 +37,15 @@ namespace InputSystem
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interaction"",
+                    ""type"": ""Button"",
+                    ""id"": ""208e7c12-608c-436e-98a2-91daf59258ec"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -94,6 +103,129 @@ namespace InputSystem
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1d57629a-b5d3-492d-beec-7b35b4f15d04"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Accessibility"",
+            ""id"": ""a1d3b89e-922c-4c74-ae8e-3b6468045c96"",
+            ""actions"": [
+                {
+                    ""name"": ""CameraOffset"",
+                    ""type"": ""Value"",
+                    ""id"": ""d0663d85-8759-4041-9474-e165a9094735"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""SceneSwitchToNext"",
+                    ""type"": ""Button"",
+                    ""id"": ""33a1665a-350d-4265-8e56-577f0136803b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SceneSwitchToPrevious"",
+                    ""type"": ""Button"",
+                    ""id"": ""b48016b5-1558-4f27-bd67-c6d6d2315079"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""95848eee-0d02-4742-8a20-e3c6f5f287e8"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraOffset"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""ae984fbd-2368-47c5-a119-4bdd9ac994d3"",
+                    ""path"": ""<Keyboard>/numpad8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboradMouse"",
+                    ""action"": ""CameraOffset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d2b56c76-96d0-4a29-8f2f-afde1a0b709f"",
+                    ""path"": ""<Keyboard>/numpad2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboradMouse"",
+                    ""action"": ""CameraOffset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""079aae06-7996-491a-b411-eb2cb608078d"",
+                    ""path"": ""<Keyboard>/numpad4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboradMouse"",
+                    ""action"": ""CameraOffset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""abf7ead0-45f0-4322-b5db-bc71f09f0b38"",
+                    ""path"": ""<Keyboard>/numpad6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboradMouse"",
+                    ""action"": ""CameraOffset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5ca78f6-1d39-4126-a7e1-e3c53f9c61f7"",
+                    ""path"": ""<Keyboard>/numpad3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboradMouse"",
+                    ""action"": ""SceneSwitchToNext"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5732666-5678-4f2d-b1ad-34132dd46d66"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboradMouse"",
+                    ""action"": ""SceneSwitchToPrevious"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -120,6 +252,12 @@ namespace InputSystem
             // MainControl
             m_MainControl = asset.FindActionMap("MainControl", throwIfNotFound: true);
             m_MainControl_Move = m_MainControl.FindAction("Move", throwIfNotFound: true);
+            m_MainControl_Interaction = m_MainControl.FindAction("Interaction", throwIfNotFound: true);
+            // Accessibility
+            m_Accessibility = asset.FindActionMap("Accessibility", throwIfNotFound: true);
+            m_Accessibility_CameraOffset = m_Accessibility.FindAction("CameraOffset", throwIfNotFound: true);
+            m_Accessibility_SceneSwitchToNext = m_Accessibility.FindAction("SceneSwitchToNext", throwIfNotFound: true);
+            m_Accessibility_SceneSwitchToPrevious = m_Accessibility.FindAction("SceneSwitchToPrevious", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -182,11 +320,13 @@ namespace InputSystem
         private readonly InputActionMap m_MainControl;
         private List<IMainControlActions> m_MainControlActionsCallbackInterfaces = new List<IMainControlActions>();
         private readonly InputAction m_MainControl_Move;
+        private readonly InputAction m_MainControl_Interaction;
         public struct MainControlActions
         {
             private @MainInput m_Wrapper;
             public MainControlActions(@MainInput wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_MainControl_Move;
+            public InputAction @Interaction => m_Wrapper.m_MainControl_Interaction;
             public InputActionMap Get() { return m_Wrapper.m_MainControl; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -199,6 +339,9 @@ namespace InputSystem
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Interaction.started += instance.OnInteraction;
+                @Interaction.performed += instance.OnInteraction;
+                @Interaction.canceled += instance.OnInteraction;
             }
 
             private void UnregisterCallbacks(IMainControlActions instance)
@@ -206,6 +349,9 @@ namespace InputSystem
                 @Move.started -= instance.OnMove;
                 @Move.performed -= instance.OnMove;
                 @Move.canceled -= instance.OnMove;
+                @Interaction.started -= instance.OnInteraction;
+                @Interaction.performed -= instance.OnInteraction;
+                @Interaction.canceled -= instance.OnInteraction;
             }
 
             public void RemoveCallbacks(IMainControlActions instance)
@@ -223,6 +369,68 @@ namespace InputSystem
             }
         }
         public MainControlActions @MainControl => new MainControlActions(this);
+
+        // Accessibility
+        private readonly InputActionMap m_Accessibility;
+        private List<IAccessibilityActions> m_AccessibilityActionsCallbackInterfaces = new List<IAccessibilityActions>();
+        private readonly InputAction m_Accessibility_CameraOffset;
+        private readonly InputAction m_Accessibility_SceneSwitchToNext;
+        private readonly InputAction m_Accessibility_SceneSwitchToPrevious;
+        public struct AccessibilityActions
+        {
+            private @MainInput m_Wrapper;
+            public AccessibilityActions(@MainInput wrapper) { m_Wrapper = wrapper; }
+            public InputAction @CameraOffset => m_Wrapper.m_Accessibility_CameraOffset;
+            public InputAction @SceneSwitchToNext => m_Wrapper.m_Accessibility_SceneSwitchToNext;
+            public InputAction @SceneSwitchToPrevious => m_Wrapper.m_Accessibility_SceneSwitchToPrevious;
+            public InputActionMap Get() { return m_Wrapper.m_Accessibility; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(AccessibilityActions set) { return set.Get(); }
+            public void AddCallbacks(IAccessibilityActions instance)
+            {
+                if (instance == null || m_Wrapper.m_AccessibilityActionsCallbackInterfaces.Contains(instance)) return;
+                m_Wrapper.m_AccessibilityActionsCallbackInterfaces.Add(instance);
+                @CameraOffset.started += instance.OnCameraOffset;
+                @CameraOffset.performed += instance.OnCameraOffset;
+                @CameraOffset.canceled += instance.OnCameraOffset;
+                @SceneSwitchToNext.started += instance.OnSceneSwitchToNext;
+                @SceneSwitchToNext.performed += instance.OnSceneSwitchToNext;
+                @SceneSwitchToNext.canceled += instance.OnSceneSwitchToNext;
+                @SceneSwitchToPrevious.started += instance.OnSceneSwitchToPrevious;
+                @SceneSwitchToPrevious.performed += instance.OnSceneSwitchToPrevious;
+                @SceneSwitchToPrevious.canceled += instance.OnSceneSwitchToPrevious;
+            }
+
+            private void UnregisterCallbacks(IAccessibilityActions instance)
+            {
+                @CameraOffset.started -= instance.OnCameraOffset;
+                @CameraOffset.performed -= instance.OnCameraOffset;
+                @CameraOffset.canceled -= instance.OnCameraOffset;
+                @SceneSwitchToNext.started -= instance.OnSceneSwitchToNext;
+                @SceneSwitchToNext.performed -= instance.OnSceneSwitchToNext;
+                @SceneSwitchToNext.canceled -= instance.OnSceneSwitchToNext;
+                @SceneSwitchToPrevious.started -= instance.OnSceneSwitchToPrevious;
+                @SceneSwitchToPrevious.performed -= instance.OnSceneSwitchToPrevious;
+                @SceneSwitchToPrevious.canceled -= instance.OnSceneSwitchToPrevious;
+            }
+
+            public void RemoveCallbacks(IAccessibilityActions instance)
+            {
+                if (m_Wrapper.m_AccessibilityActionsCallbackInterfaces.Remove(instance))
+                    UnregisterCallbacks(instance);
+            }
+
+            public void SetCallbacks(IAccessibilityActions instance)
+            {
+                foreach (var item in m_Wrapper.m_AccessibilityActionsCallbackInterfaces)
+                    UnregisterCallbacks(item);
+                m_Wrapper.m_AccessibilityActionsCallbackInterfaces.Clear();
+                AddCallbacks(instance);
+            }
+        }
+        public AccessibilityActions @Accessibility => new AccessibilityActions(this);
         private int m_KeyboradMouseSchemeIndex = -1;
         public InputControlScheme KeyboradMouseScheme
         {
@@ -235,6 +443,13 @@ namespace InputSystem
         public interface IMainControlActions
         {
             void OnMove(InputAction.CallbackContext context);
+            void OnInteraction(InputAction.CallbackContext context);
+        }
+        public interface IAccessibilityActions
+        {
+            void OnCameraOffset(InputAction.CallbackContext context);
+            void OnSceneSwitchToNext(InputAction.CallbackContext context);
+            void OnSceneSwitchToPrevious(InputAction.CallbackContext context);
         }
     }
 }

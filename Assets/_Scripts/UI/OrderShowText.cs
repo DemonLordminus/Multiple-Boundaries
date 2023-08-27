@@ -6,13 +6,17 @@ using UnityEngine;
 
 public class OrderShowText : NetworkBehaviour
 {
+    [SerializeField] bool isUse;
     [SerializeField] TextMeshProUGUI nowOrderText;
     [SerializeField] TextMeshProUGUI OrderListText;
     [SerializeField] TextMeshProUGUI IDText;
     private void Awake()
     {
-        NetdataManager.OnOrderUpdate += UpdateOrderList;
-        NetdataManager.OnOrderUpdate += UpdateNowOrder;
+        if (isUse)
+        {
+            NetdataManager.OnOrderUpdate += UpdateOrderList;
+            NetdataManager.OnOrderUpdate += UpdateNowOrder; 
+        }
     }
     public override void OnNetworkSpawn()
     {
@@ -33,7 +37,10 @@ public class OrderShowText : NetworkBehaviour
     {
         base.OnNetworkDespawn();
         OrderListText.gameObject.SetActive(true);
-        NetdataManager.OnOrderUpdate += UpdateOrderList;
+        if (isUse)
+        {
+            NetdataManager.OnOrderUpdate += UpdateOrderList;
+        }
     }
 
     private void UpdateNowOrder()

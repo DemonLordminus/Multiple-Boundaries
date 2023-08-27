@@ -10,8 +10,8 @@ public class SystemManager : Singleton<SystemManager>
         DontDestroyOnLoad(gameObject);
     }
     public CameraGroup cameraGroup;
-    public ControllerWhitWindowPosition controller;
-
+    public ControllerWhitWindowPosition cameraController;
+    public Transform cameraRoot;
     //private void OnDestroy()
     //{
     //    Destroy(cameraGroup.gameObject);

@@ -4,16 +4,22 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NetButton : NetworkBehaviour
 {
     private float nowTime = 10f;
-    [SerializeField] NetdataManager netdataManager;
     public static event Action OnNetDone;
+    [SceneName] public string firstScene;
     private async void Start()
     {
+        if(NetworkManager.Singleton.IsConnectedClient || IsHost)
+        {
+            return;
+        }
         await Task.Yield();
         TestServer();
+
     }
     [EditorButton]
     private async void TestServer()
@@ -25,7 +31,7 @@ public class NetButton : NetworkBehaviour
         }
         else
         {
-            await Task.Delay(3000);
+            await Task.Delay(2000);
         }
         // 判断当前是否有主机
         if (NetworkManager.Singleton.IsConnectedClient)
@@ -58,7 +64,13 @@ public class NetButton : NetworkBehaviour
     //    var spawn = Instantiate(netdataManager);
     //    spawn.NetworkObject.SpawnAsPlayerObject(playerId);
     //}
-
+    private void Update()
+    {
+        if (NetworkManager.Singleton.IsConnectedClient || NetworkManager.Singleton.IsServer)
+        {
+            NetworkManager.Singleton.SceneManager.LoadScene(firstScene, LoadSceneMode.Single);
+        }
+    }
 
     private async void TestHost()
     {
@@ -93,19 +105,19 @@ public class NetButton : NetworkBehaviour
 
     static void StartButtons()
     {
-        if (GUILayout.Button("Host")) NetworkManager.Singleton.StartHost();
-        if (GUILayout.Button("Client")) NetworkManager.Singleton.StartClient();
+        //if (GUILayout.Button("Host")) NetworkManager.Singleton.StartHost();
+        //if (GUILayout.Button("Client")) NetworkManager.Singleton.StartClient();
         //if (GUILayout.Button("Server")) NetworkManager.Singleton.StartServer();
     }
 
     static void StatusLabels()
     {
-        var mode = NetworkManager.Singleton.IsHost ?
-            "Host" : NetworkManager.Singleton.IsServer ? "Server" : "Client";
+        //var mode = NetworkManager.Singleton.IsHost ?
+        //    "Host" : NetworkManager.Singleton.IsServer ? "Server" : "Client";
 
-        GUILayout.Label("Transport: " +
-            NetworkManager.Singleton.NetworkConfig.NetworkTransport.GetType().Name);
-        GUILayout.Label("Mode: " + mode);
+        //GUILayout.Label("Transport: " +
+        //    NetworkManager.Singleton.NetworkConfig.NetworkTransport.GetType().Name);
+        //GUILayout.Label("Mode: " + mode);
     }
 
 }

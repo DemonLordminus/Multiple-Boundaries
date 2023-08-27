@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Check
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: BackGround
     uniqueID: 1020864159
+    locked: 0
+  - name: React
+    uniqueID: 2227050105
     locked: 0
   - name: Normal
     uniqueID: 3947946271
